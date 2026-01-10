@@ -1,0 +1,82 @@
+.title {
+  padding: 16px;
+}
+.foodcard {
+  text-align: center;
+ 
+}
+.image {
+  display: block;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.image-container {
+  position: relative;
+}
+
+.add-to-cart-btn {
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.42rem 0.83rem;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  background: var(--Rose-50);
+  border: 1px solid var(--Rose-300);
+  border-radius: 50px;
+  outline: none;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  cursor: pointer;
+}
+
+.details {
+  margin-top: 30px;
+  line-height: 25px;
+  text-align: left;
+  padding: 0.5rem;
+}
+.category {
+  font-size: 0.9rem;
+  color: var(--Rose-300);
+  margin: 0;
+}
+.name {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.price {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--Red);
+}
+
+.cart{
+  padding: 1.9rem;
+  background: var(--Rose-200);
+}
+.cart-logo{
+  width: 50%;
+}
+.your-cart{
+  color: var(--Red);
+}
+.cart-info{
+  color: var(--Rose-400);
+}
+.cart-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* @media (max-width:100%) {
+  .price{
+    background: black;
+  }
+  
+} */

@@ -4,12 +4,13 @@ import FoodCards from "./FoodCards";
 import Cart from "./Cart";
 
 
-export function App() {
+export default function App() {
   return (
     <>
       <Header />
+      <div className="main-page"> 
       <FoodCards />
-      <Cart/>
+      <Cart/></div>
       
     </>
   );

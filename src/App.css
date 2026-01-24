@@ -57,7 +57,7 @@ gap: 20px;
   justify-content: center;
   border: 1px solid var(--Rose-50);
   border-radius: 50%;
-  width: 2.9vw;
+  width: 2.0vw;
   height: 2.9vh;
   background: var(--Red);
   color: var(--Rose-50);
@@ -111,9 +111,28 @@ gap: 20px;
   align-items: center;
 }
 
-/* @media (max-width:100%) {
-  .price{
-    background: black;
+@media (min-width:360px) {
+
+  .foodcard{
+   
+      /* flex:1; */
+    padding: 20px;
+    /* width: 200px; */
+    
   }
+  .home{
+    display: flex;
+    /* flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 1; */
+    /* flex: 1; */
+    flex-wrap: wrap;
+    justify-content: space;
+  }
+ 
+ .main-page{
+  display: flex;
+
+ }
   
-} */
+}

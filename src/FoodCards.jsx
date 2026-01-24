@@ -10,7 +10,6 @@ import brownie from "url:./public/image-brownie-mobile.jpg";
 import pannaCotta from "url:./public/image-panna-cotta-mobile.jpg";
 import meringue from "url:./public/image-meringue-mobile.jpg";
 
-// import data from './data.js';
 
 const data = [
   {
@@ -69,8 +68,6 @@ const data = [
   },
 ];
 
-// function cartButton(){
-// }
 
 function FoodCard({ item }) {
   const { name, category, image, price } = item;

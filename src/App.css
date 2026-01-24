@@ -3,7 +3,6 @@
 }
 .foodcard {
   text-align: center;
- 
 }
 .image {
   display: block;
@@ -32,6 +31,44 @@
   transform: translate(-50%, 50%);
   cursor: pointer;
 }
+.cart-controls {
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.42rem 0.83rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+gap: 20px;
+ 
+  background: var(--Red);
+
+  border-radius: 50px;
+  outline: none;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  color: var(--Rose-50);
+ 
+}
+.cart-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--Rose-50);
+  border-radius: 50%;
+  width: 2.9vw;
+  height: 2.9vh;
+  background: var(--Red);
+  color: var(--Rose-50);
+  cursor: pointer;
+  
+}
+
+.cart-btn:hover{
+  background:var(--Rose-50);
+  color: var(--Red);
+}
 
 .details {
   margin-top: 30px;
@@ -54,20 +91,20 @@
   color: var(--Red);
 }
 
-.cart{
+.cart {
   padding: 1.9rem;
   background: var(--Rose-200);
 }
-.cart-logo{
+.cart-logo {
   width: 50%;
 }
-.your-cart{
+.your-cart {
   color: var(--Red);
 }
-.cart-info{
+.cart-info {
   color: var(--Rose-400);
 }
-.cart-container{
+.cart-container {
   display: flex;
   flex-direction: column;
   justify-content: center;

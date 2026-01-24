@@ -1,3 +1,4 @@
+import { useState } from "react";
 import waffleWithBerries from "url:./public/image-waffle-mobile.jpg";
 import addToCart from "url:./public/icon-add-to-cart.svg";
 import cremeBrulee from "url:./public/image-creme-brulee-mobile.jpg";
@@ -7,10 +8,9 @@ import baklava from "url:./public/image-baklava-mobile.jpg";
 import cake from "url:./public/image-cake-mobile.jpg";
 import brownie from "url:./public/image-brownie-mobile.jpg";
 import pannaCotta from "url:./public/image-panna-cotta-mobile.jpg";
-import pannaCotta from "url:./public/image-panna-cotta-mobile.jpg";
-
 import meringue from "url:./public/image-meringue-mobile.jpg";
-// import data from './data.json'
+
+// import data from './data.js';
 
 const data = [
   {
@@ -69,21 +69,50 @@ const data = [
   },
 ];
 
+// function cartButton(){
+// }
+
 function FoodCard({ item }) {
   const { name, category, image, price } = item;
+  const [isAdded, setIsAdded] = useState(false);
+  const [quantity, setQuantity] = useState(1);
   return (
     <>
       <div className="foodcard">
         <div className="image-container">
           <img src={image} alt={`alt-${image}`} className="image" />
-          <button className="add-to-cart-btn">
-            <img
-              src={addToCart}
-              alt="alt-add-to-cart"
-              className="add-to-cart-icon"
-            />
-            Add to Cart
-          </button>
+
+          {!isAdded ? (
+            <button
+              className="add-to-cart-btn"
+              onClick={() => setIsAdded(true)}
+            >
+              <img
+                src={addToCart}
+                alt="alt-add-to-cart"
+                className="add-to-cart-icon"
+              />
+              Add to Cart
+            </button>
+          ) : (
+            <div className="cart-controls">
+              <button
+                className="sub-quantity cart-btn"
+                onClick={() => setQuantity(quantity - 1)}
+              >
+                -
+              </button>
+
+              <p>{quantity}</p>
+
+              <button
+                className="add-quantity cart-btn"
+                onClick={() => setQuantity(quantity + 1)}
+              >
+                +
+              </button>{" "}
+            </div>
+          )}
         </div>
         <div className="details">
           <p className="category">{category} </p>

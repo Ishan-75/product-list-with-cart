@@ -1,4 +1,4 @@
-[
+const data=[
     {
        "image": "waffleWithBerries",
        "name": "Waffle with Berries",

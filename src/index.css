@@ -18,11 +18,11 @@ body{
 
 .home {
   display: grid;
-  padding: 1rem;
-  grid-template-columns: repeat(2, 1fr);
+  padding: 0.9rem;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-@media (max-width: 375px) {
+@media (max-width: 380px) {
   .home {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -37,4 +37,8 @@ body{
   --Rose-400: hsl(7, 20%, 60%);
   --Rose-500: hsl(12, 20%, 44%);
   --Rose-900: hsl(14, 65%, 9%);
+}
+
+#root{
+  padding: 1.2rem;
 }

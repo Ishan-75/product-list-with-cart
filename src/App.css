@@ -15,7 +15,8 @@
 }
 
 .add-to-cart-btn {
-  font-size: 0.7rem;
+  font-size: 0.6rem;
+
   font-weight: 500;
   padding: 0.42rem 0.83rem;
   display: flex;
@@ -31,6 +32,8 @@
   transform: translate(-50%, 50%);
   cursor: pointer;
 }
+
+
 .cart-controls {
   font-size: 0.7rem;
   font-weight: 500;
@@ -38,10 +41,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-gap: 20px;
- 
+  gap: 20px;
+  
   background: var(--Red);
-
+  
   border-radius: 50px;
   outline: none;
   position: absolute;
@@ -49,7 +52,7 @@ gap: 20px;
   left: 50%;
   transform: translate(-50%, 50%);
   color: var(--Rose-50);
- 
+  
 }
 .cart-btn {
   display: flex;
@@ -92,17 +95,20 @@ gap: 20px;
 }
 
 .cart {
-  padding: 1.9rem;
+  padding: 2.7rem 1.9rem;
   background: var(--Rose-200);
 }
 .cart-logo {
-  width: 50%;
+  width: 65%;
+  padding: 25px 6px;
 }
 .your-cart {
   color: var(--Red);
+  font-size: 1.0rem;
 }
 .cart-info {
   color: var(--Rose-400);
+  font-size: 1.0rem;
 }
 .cart-container {
   display: flex;
@@ -111,28 +117,27 @@ gap: 20px;
   align-items: center;
 }
 
-@media (min-width:360px) {
-
-  .foodcard{
-   
-      /* flex:1; */
-    padding: 20px;
-    /* width: 200px; */
-    
-  }
-  .home{
-    display: flex;
-    /* flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 1; */
-    /* flex: 1; */
-    flex-wrap: wrap;
-    justify-content: space;
-  }
- 
- .main-page{
-  display: flex;
-
- }
+@media screen and (min-width:380px) {
   
+  .foodcard{  
+    padding: 0 10px;
+  }
+  
+  .main-page{
+    display: flex;
+  }
+  .cart{
+    width: 50vw;
+    /* top: 150px; */
+    margin: -80px 10px;
+  }
+  .add-to-cart-btn{
+  font-weight: 700;
 }
+.cart-quantity{
+  font-size: 1.1rem;
+}
+ 
+}
+
+

@@ -10,7 +10,7 @@ export default function CartBtn({ prd, item }) {
   const increaseQty = () => {
     setQuantity(quantity + 1);
 
-    // Add item to cart correctly
+ 
     setCart((prevCart) => [...prevCart, item]);
   };
 
@@ -18,7 +18,7 @@ export default function CartBtn({ prd, item }) {
     if (quantity > 0) {
       setQuantity(quantity - 1);
 
-      // Remove one item from cart
+  
       setCart((prevCart) => prevCart.slice(0, -1));
     }
   };

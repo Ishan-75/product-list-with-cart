@@ -9,7 +9,7 @@ export default function FoodCard({ item, prd }) {
       <div className="foodcard">
         <div className="image-container">
           <img src={image} alt={`alt-${image}`} className="image" />
-          <CartBtn prd={prd} />
+          <CartBtn prd={prd} item={item} />
         </div>
 
 

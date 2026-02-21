@@ -8,15 +8,15 @@ export default function FoodCard({ item, prd }) {
     <>
       <div className="foodcard">
         <div className="image-container">
-          <img src={image} alt={`alt-${image}`} className="image" />
           <CartBtn prd={prd} item={item} />
+          <img src={image} alt={`alt-${image}`} className="image" />
         </div>
 
 
         <div className="details">
           <p className="category">{category} </p>
           <p className="name">{name}</p>
-          <p className="price">{price}</p>
+          <p className="price">${price}</p>
         </div>
       </div>
     </>

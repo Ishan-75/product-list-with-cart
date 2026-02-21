@@ -6,6 +6,7 @@
 }
 .image {
   display: block;
+
   width: 100%;
   border-radius: 15px;
 }
@@ -14,23 +15,29 @@
   position: relative;
 }
 
-.add-to-cart-btn {
-  font-size: 0.6rem;
 
-  font-weight: 500;
-  padding: 0.42rem 0.83rem;
+.add-to-cart-btn {
   display: flex;
   align-items: center;
-  column-gap: 8px;
-  background: var(--Rose-50);
-  border: 1px solid var(--Rose-300);
+  justify-content: center;
+  background: var(--Rose-50); 
   border-radius: 50px;
-  outline: none;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 50%);
+  border: 1px solid var(--Rose-300); 
+  padding: 10px 20px;
+  font-size: 0.5rem;
+  font-weight: 500;
   cursor: pointer;
+  min-width: 140px;   
+}
+.add-to-cart{
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding:0 px;
+}
+.add-to-cart-btn img {
+  margin-right: 8px; 
 }
 
 
@@ -52,6 +59,18 @@
   left: 50%;
   transform: translate(-50%, 50%);
   color: var(--Rose-50);
+  
+}
+.cart-controls img{
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid black ;
+  width: 2vw;
+}
+.cart-controls img:hover{
+  transform: scale(1.1);
+  /* box-shadow: rgb(145, 142, 142) 0px 2px 10px; */
+  border: 2px solid white ;
   
 }
 .cart-btn {
@@ -80,16 +99,16 @@
   padding: 0.5rem;
 }
 .category {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   color: var(--Rose-300);
   margin: 0;
 }
 .name {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   font-weight: 600;
 }
 .price {
-  font-size: 1.1rem;
+  font-size: 0.7rem;
   font-weight: 500;
   color: var(--Red);
 }
@@ -97,6 +116,7 @@
 .cart {
   padding: 2.7rem 1.9rem;
   background: var(--Rose-200);
+  
 }
 .cart-logo {
   width: 65%;
@@ -117,6 +137,9 @@
   align-items: center;
 }
 .individual-cart-item{
+  display: flex;
+  position: relative;
+  flex-direction: column;
   font-size: 10px;
   border: 1px solid var(--Rose-50);
   border-radius: 10px;
@@ -124,6 +147,20 @@
   padding: 0.4rem;
   margin-top: 10px;
 }
+.individual-cart-item img{
+  position: absolute;
+  left:130px;
+  top: 40%;
+  transition: background 0.3s ease, transform 0.2 ease;
+  border-radius: 50%;
+  border: 2px solid var(--Rose-300);
+  padding: 1px;
+}
+.individual-cart-item img:hover{
+  background: var(--Rose-300);
+  transform: scale(1.1);  
+}
+
 .cart-item-name{
   font-weight: 600;
 }
@@ -134,18 +171,85 @@
   color: var(--Rose-300);
 }
 .cart-item-price-quantity{
-  display: flex;
+  display: flex;  
   margin-top: 5px;
   gap: 10px;
 }
 .cart-item-total-all{
   display: flex;
+  color: var(--Rose-400);
   gap: 10px;
 }
-.cart-item-price-total{
-  color: var(--Rose-400);
 
+.cart img{
+  cursor: pointer;
 }
+.order-total{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.6rem;
+  font-weight: 500;
+  margin-top: 20px;
+  color: var(--Rose-400);
+}
+.total-amount{
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 10px 0;
+  color: black;
+}
+.carbon-neutral{
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 0.5rem;
+  font-weight: 600;
+}
+.confirm-btn{
+  margin-top: 20px;
+}
+.confirm{
+  padding: 10px 33px;
+  background: var(--Red);
+  color: var(--Rose-50);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.confirm:hover{
+  transform: scale(1.1);
+}
+
+
+.overlay {
+  position: fixed;        /* important */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4); /* better than opacity */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;          /* sits above everything */
+}
+.popup{
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+}
+.new-order{
+  padding: 10px 33px;
+  background: var(--Red);
+  color: var(--Rose-50);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+
 
 @media screen and (min-width:380px) {
   
@@ -158,9 +262,13 @@
   }
   .cart{
     width: 50vw;
-    /* top: 150px; */
     margin: -80px 10px;
+    position: sticky;
   }
+.cart-component{
+  position: sticky;
+  top: 20px;
+}
   .add-to-cart-btn{
   font-weight: 700;
 }

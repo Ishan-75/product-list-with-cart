@@ -1,4 +1,3 @@
-import { useState } from "react";
 export default function OrderConfirmed({ prd, showPopup, setShowPopup  }) {
   const [cart, setCart] = prd;
   const groupedItems = cart.reduce((total, item) => {

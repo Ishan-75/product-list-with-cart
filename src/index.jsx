@@ -3,10 +3,8 @@ import { StrictMode } from 'react';
 import  App  from './App';
 import './index.css';
 
-let container = document.getElementById("root");
-let root = createRoot(container)
-root.render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
+    <App/>
   </StrictMode>
-);
+)

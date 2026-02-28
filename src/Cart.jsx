@@ -1,6 +1,6 @@
 import cartLogo from "url:./public/illustration-empty-cart.svg";
 import remove from "url:./public/icon-remove-item.svg";
-import carbonNeutral from "url:./public/icon-carbon-neutral.svg/"
+import carbonNeutral from "url:./public/icon-carbon-neutral.svg"
 import OrderConfirmed from "./OrderConfirmed";
 import { useState } from "react";
 export default function Cart({ prd }) {

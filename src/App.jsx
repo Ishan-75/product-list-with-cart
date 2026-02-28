@@ -8,7 +8,7 @@ export default function App() {
   const prdState = useState([]);
   return (
     <>
-      <Header />
+      <Header/>
       <div className="main-page">
         <FoodCards prd={prdState} />
         <Cart prd={prdState}/>

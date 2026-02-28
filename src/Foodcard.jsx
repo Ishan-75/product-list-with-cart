@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import CartBtn from "./CartBtn";
 
 export default function FoodCard({ item, prd }) {

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import confirm from "url:./public/icon-order-confirmed.svg"
 export default function OrderConfirmed({ prd, showPopup, setShowPopup  }) {
   const [cart, setCart] = prd;
@@ -13,10 +14,27 @@ export default function OrderConfirmed({ prd, showPopup, setShowPopup  }) {
   const cartItems = Object.values(groupedItems);
   const orderTotal = cart.reduce((total, item) => total + item.price, 0);
 
-  function newOrder(){
-    setShowPopup(false)
-    window.location.reload();
-  }
+  function newOrder() {
+  setCart([]);
+  setShowPopup(false);
+}
+
+useEffect(() => {
+  if (!showPopup) return;
+
+  const handleEsc = (e) => {
+    if (e.key === "Escape") {
+      setShowPopup(false);
+    }
+  };
+
+  document.addEventListener("keydown", handleEsc);
+
+  return () => {
+    document.removeEventListener("keydown", handleEsc);
+  };
+}, [showPopup, setShowPopup]);
+
 
   return (
     <>

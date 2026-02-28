@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import addToCart from "url:./public/icon-add-to-cart.svg";
 import decrement from "url:./public/icon-decrement.png";
 import increment from "url:./public/icon-increment.png";

@@ -1,3 +1,4 @@
+import confirm from "url:./public/icon-order-confirmed.svg"
 export default function OrderConfirmed({ prd, showPopup, setShowPopup  }) {
   const [cart, setCart] = prd;
   const groupedItems = cart.reduce((total, item) => {
@@ -21,18 +22,20 @@ export default function OrderConfirmed({ prd, showPopup, setShowPopup  }) {
     <>
       <div className="overlay">
         <div className="popup">
-          <p>Order confirmed</p>
+        <img src={confirm} alt="tick   "/>
+          <p className="order-confirmed pop">Order confirmed</p>
+          <p className="order-confirmed-info pop">We hope you enjoy your food!</p>
 
           {cartItems.map((item) => (
-            <div className="individual-cart-item" key={item.name}>
-              <p className="cart-item-name">{item.name}</p>
+            <div className="individual-cart-item pop" key={item.name}>
+              <p className="cart-item-name pop">{item.name}</p>
 
-              <div className="cart-item-price-quantity">
-                <p className="cart-item-quantity">x{item.quantity}</p>
+              <div className="cart-item-price-quantity pop">
+                <p className="cart-item-quantity pop">x{item.quantity}</p>
 
-                <div className="cart-item-total-all">
-                  <p className="cart-item-price">@{item.price}</p>
-                  <p className="cart-item-price-total">
+                <div className="cart-item-total-all pop">
+                  <p className="cart-item-price pop">@{item.price}</p>
+                  <p className="cart-item-price-total pop">
                     ${item.price * item.quantity}
                   </p>
                 </div>
